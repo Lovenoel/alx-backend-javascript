@@ -2,8 +2,8 @@
 A function named handleProfileSignup that accepts three arguments
 firstName (string), lastName (string), and fileName (string)
 */
-import signUpUser from "./4-user-promise";
-import uploadPhoto from "./5-photo-reject";
+import signUpUser from "./4-user-promise.js";
+import uploadPhoto from "./5-photo-reject.js";
 
 export default function handleProfileSignup(firstName, lastName, fileName) {
   const userPromise = signUpUser(firstName, lastName);
