@@ -1,10 +1,5 @@
-/*
-A file that Returns a Promise using this prototype
-function getResponseFromAPI()
-*/
+// Return a Promise using this prototype function getResponseFromAPI()
 
-function getFullResponseFromAPI() {
-    return new Promise((resolve, reject) => {})
+export default function getFullResponseFromAPI() {
+    return (Promise.resolve());
 }
-
-export default getFullResponseFromAPI
