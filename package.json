@@ -1,0 +1,33 @@
+{
+  "name": "alx-backend-javascript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node",
+    "test": "jest",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lovenoel/alx-backend-javascript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lovenoel/alx-backend-javascript/issues"
+  },
+  "homepage": "https://github.com/Lovenoel/alx-backend-javascript#readme",
+  "devDependencies": {
+    "@babel/core": "latest",
+    "@babel/preset-env": "latest",
+    "@eslint/js": "^9.11.1",
+    "babel-jest": "latest",
+    "eslint": "^9.11.1",
+    "eslint-plugin-jest": "latest",
+    "globals": "^15.10.0",
+    "jest": "latest"
+  }
+}
