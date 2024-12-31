@@ -1,6 +1,6 @@
 export default function createIteratorObject(report) {
   const employees = [];
-  
+
   // Flatten the employee list from all departments
   for (const department of Object.values(report.allEmployees)) {
     employees.push(...department);
@@ -13,7 +13,9 @@ export default function createIteratorObject(report) {
       return {
         next() {
           if (index < employees.length) {
-            return { value: employees[index++], done: false };
+            const value = employees[index];
+            index += 1; // Replaced index++ with index += 1
+            return { value, done: false };
           }
           return { done: true };
         },
