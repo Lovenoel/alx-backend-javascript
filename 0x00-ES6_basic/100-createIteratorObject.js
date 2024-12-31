@@ -1,10 +1,7 @@
 export default function createIteratorObject(report) {
-  if (!report || !report.allEmployees) {
-    throw new Error('Invalid report object');
-  }
-
+  // Ensure the `report` object contains the expected structure
   const employees = [];
-  for (const department of Object.values(report.allEmployees)) {
+  for (const department of Object.values(report.allEmployees || {})) {
     employees.push(...department);
   }
 
@@ -14,7 +11,7 @@ export default function createIteratorObject(report) {
       return {
         next() {
           const employee = employees[index];
-          index += 1; // Avoids using 'index++'
+          index += 1; // Avoids ESLint warnings
           return employee !== undefined
             ? { value: employee, done: false }
             : { done: true };
