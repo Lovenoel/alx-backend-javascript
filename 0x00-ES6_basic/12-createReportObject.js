@@ -1,6 +1,8 @@
-export default function getListStudentIds(students) {
-  if (!Array.isArray(students)) {
-    return [];
-  }
-  return students.map((student) => student.id);
+export default function createReportObject(employeesList) {
+  return {
+    allEmployees: { ...employeesList },
+    getNumberOfDepartments() {
+      return Object.keys(this.allEmployees).length;
+    },
+  };
 }
